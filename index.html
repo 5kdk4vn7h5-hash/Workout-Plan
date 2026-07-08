@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>12-Week Transformation Plan</title>
+<title>Training Plan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,17 +22,12 @@
   .header { padding: 36px 22px 0; }
   .kicker { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; }
   .title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 8vw, 58px); font-weight: 700; line-height: 1.02; letter-spacing: -1.5px; margin-bottom: 12px; }
-  .subtitle { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 460px; margin-bottom: 26px; }
-  .stats { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line); margin-bottom: 26px; }
+  .subtitle { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 480px; margin-bottom: 26px; }
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line); margin-bottom: 30px; }
   .stat { padding: 14px 10px; text-align: center; border-right: 1px solid var(--line); }
   .stat:last-child { border-right: none; }
   .stat-v { font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 700; }
   .stat-k { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--dim); margin-top: 3px; font-weight: 500; }
-  .weeks-label { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--dim); margin-bottom: 8px; font-weight: 600; }
-  .weeks { display: grid; grid-template-columns: repeat(12, 1fr); gap: 5px; margin-bottom: 30px; }
-  .wk { aspect-ratio: 1; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; color: var(--dim); cursor: pointer; transition: all 0.15s; user-select: none; }
-  .wk:hover { border-color: var(--line-strong); color: var(--muted); }
-  .wk.lit { color: #161412; font-weight: 700; }
   .nav { display: flex; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .nav button { flex: 1; background: none; border: none; border-right: 1px solid var(--line); padding: 15px 16px; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--dim); white-space: nowrap; transition: all 0.15s; }
   .nav button:last-child { border-right: none; }
@@ -41,23 +36,17 @@
   .content { padding: 26px 22px 10px; }
   .section { display: none; }
   .section.on { display: block; }
-  .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
-  .phase-sq { border: 1px solid var(--line); background: var(--panel); padding: 14px 12px; cursor: pointer; transition: all 0.15s; font-family: 'Space Grotesk', sans-serif; text-align: left; }
-  .phase-sq .n { font-size: 22px; font-weight: 700; line-height: 1; color: var(--dim); }
-  .phase-sq .w { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--dim); margin-top: 5px; font-weight: 600; }
-  .phase-sq:hover { border-color: var(--line-strong); }
-  .phase-banner { border: 1px solid var(--line); border-left: 3px solid var(--amber); background: var(--panel); padding: 18px 20px; margin-bottom: 18px; }
-  .phase-banner .b-tag { font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
-  .phase-banner .b-name { font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
-  .phase-banner .b-goal { font-size: 12px; color: var(--muted); line-height: 1.7; }
-  .days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-bottom: 22px; }
-  .day-sq { aspect-ratio: 1; border: 1px solid var(--line); background: var(--panel); display: flex; align-items: center; justify-content: center; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; color: var(--dim); transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.5px; }
-  .day-sq:hover:not(.on) { border-color: var(--line-strong); color: var(--muted); }
-  .day-sq.on { background: var(--panel2); border-color: var(--line-strong); color: var(--text); }
+  .days { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 22px; }
+  .day-sq { border: 1px solid var(--line); background: var(--panel); padding: 14px 10px; cursor: pointer; transition: all 0.15s; font-family: 'Space Grotesk', sans-serif; text-align: center; }
+  .day-sq .dd { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--dim); }
+  .day-sq .dl { font-size: 13px; font-weight: 600; margin-top: 4px; color: var(--muted); }
+  .day-sq:hover:not(.on) { border-color: var(--line-strong); }
+  .day-sq.on .dd { color: #161412; }
+  .day-sq.on .dl { color: #161412; }
   .day-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
   .day-head .d { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; }
-  .day-head .t { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
-  .day-focus { font-size: 11px; color: var(--muted); margin-bottom: 14px; font-style: italic; }
+  .day-head .t { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+  .day-focus { font-size: 11px; color: var(--muted); margin-bottom: 16px; font-style: italic; }
   .box { border: 1px solid var(--line); background: var(--panel); padding: 15px 17px; margin-bottom: 10px; }
   .box-tag { font-family: 'Space Grotesk', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 7px; }
   .box-txt { font-size: 12.5px; color: var(--muted); line-height: 1.75; white-space: pre-line; }
@@ -76,7 +65,6 @@
   .core-tag { font-family: 'Space Grotesk', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 7px; color: var(--sage); }
   .core-txt { font-size: 12.5px; color: var(--muted); line-height: 1.8; }
   .core-txt b { color: var(--text); font-weight: 600; }
-  .rest-note { border: 1px dashed var(--line); padding: 30px; text-align: center; font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--dim); font-weight: 600; line-height: 1.8; }
   .h2 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 18px; }
   .rule { display: flex; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--line); }
   .rule .no { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700; color: var(--amber); border: 1px solid var(--line); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -109,15 +97,15 @@
   .note .nl { font-family: 'Space Grotesk', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 6px; }
   .note .nb { font-size: 12.5px; color: var(--muted); line-height: 1.75; }
   .footer { padding: 18px 22px 28px; border-top: 1px solid var(--line); margin-top: 16px; font-size: 10.5px; color: var(--dim); line-height: 1.6; }
-  @media(max-width:480px){ .stat-v { font-size: 15px; } .pgrid { grid-template-columns: 1fr; } .cal-num { font-size: 52px; } .weeks { gap: 3px; } }
+  @media(max-width:480px){ .stat-v { font-size: 15px; } .pgrid { grid-template-columns: 1fr; } .cal-num { font-size: 52px; } .days { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
 <div class="app">
   <div class="header">
-    <div class="kicker">12-Week Program</div>
+    <div class="kicker">Training Plan</div>
     <div class="title">Body<br>Recomposition</div>
-    <div class="subtitle">Push / Pull / Legs ×2 — six days of hypertrophy training with rotated core. Barbell, dumbbells, single pulley. Zero ankle impact. Sunday rest.</div>
+    <div class="subtitle">Four days — Push, Pull, Legs, Supplemental. One fixed week, repeated. You control the weight and volume. Barbell, dumbbells, single pulley. Zero ankle impact.</div>
     <div class="stats">
       <div class="stat"><div class="stat-v">245</div><div class="stat-k">lbs</div></div>
       <div class="stat"><div class="stat-v">5'11"</div><div class="stat-k">height</div></div>
@@ -125,43 +113,26 @@
       <div class="stat"><div class="stat-v">24</div><div class="stat-k">age</div></div>
       <div class="stat"><div class="stat-v" style="color:var(--amber)">22–24%</div><div class="stat-k">target</div></div>
     </div>
-    <div class="weeks-label">Twelve Weeks — Tap a week to jump to its phase</div>
-    <div class="weeks" id="weeks"></div>
   </div>
   <div class="nav">
     <button class="on" onclick="sec('plan',this)">Training</button>
-    <button onclick="sec('prog',this)">Progression</button>
+    <button onclick="sec('how',this)">How to Load</button>
     <button onclick="sec('nutri',this)">Nutrition</button>
     <button onclick="sec('notes',this)">Notes</button>
   </div>
   <div class="content">
     <div class="section on" id="sec-plan">
-      <div class="phases">
-        <button class="phase-sq" id="ps-0" onclick="phase(0)"><div class="n">01</div><div class="w">Weeks 1–4</div></button>
-        <button class="phase-sq" id="ps-1" onclick="phase(1)"><div class="n">02</div><div class="w">Weeks 5–8</div></button>
-        <button class="phase-sq" id="ps-2" onclick="phase(2)"><div class="n">03</div><div class="w">Weeks 9–12</div></button>
-      </div>
-      <div class="phase-banner" id="pbanner">
-        <div class="b-tag" id="ptag"></div>
-        <div class="b-name" id="pname"></div>
-        <div class="b-goal" id="pgoal"></div>
-      </div>
       <div class="days">
-        <button class="day-sq on" onclick="day('MON',this)">Mo</button>
-        <button class="day-sq" onclick="day('TUE',this)">Tu</button>
-        <button class="day-sq" onclick="day('WED',this)">We</button>
-        <button class="day-sq" onclick="day('THU',this)">Th</button>
-        <button class="day-sq" onclick="day('FRI',this)">Fr</button>
-        <button class="day-sq" onclick="day('SAT',this)">Sa</button>
-        <button class="day-sq" onclick="day('SUN',this)">Su</button>
+        <button class="day-sq on" id="ds-MON" onclick="day('MON',this)"><div class="dd">Mon</div><div class="dl">Push</div></button>
+        <button class="day-sq" id="ds-WED" onclick="day('WED',this)"><div class="dd">Wed</div><div class="dl">Pull</div></button>
+        <button class="day-sq" id="ds-THU" onclick="day('THU',this)"><div class="dd">Thu</div><div class="dl">Legs</div></button>
+        <button class="day-sq" id="ds-SAT" onclick="day('SAT',this)"><div class="dd">Sat</div><div class="dl">Supp.</div></button>
       </div>
       <div id="daybody"></div>
     </div>
-    <div class="section" id="sec-prog">
-      <div class="h2">Progressive Overload</div>
-      <div id="rules"></div>
-      <div class="h2" style="margin-top:30px">Weekly Structure</div>
-      <div id="weekstruct"></div>
+    <div class="section" id="sec-how">
+      <div class="h2">How to Load &amp; Progress</div>
+      <div id="howbody"></div>
     </div>
     <div class="section" id="sec-nutri">
       <div class="h2">Nutrition Goals</div>
@@ -169,7 +140,7 @@
         <div class="cal-num">2,400</div>
         <div class="cal-meta">
           <div class="cl">Daily Calories</div>
-          <div class="cs">Moderate deficit — protects lean mass while driving steady fat loss. With six training days, recovery and protein matter more than ever.</div>
+          <div class="cs">Moderate deficit — protects lean mass while driving steady fat loss. Adjust up or down based on your weekly waist trend.</div>
         </div>
       </div>
       <div class="macros">
@@ -193,10 +164,10 @@
         <div class="pitem"><span class="pf">Greek yogurt (1 cup)</span><span class="pg">17g</span></div>
       </div>
       <div class="sub">Priority Rules</div>
-      <div class="pri" style="border-left-color:var(--amber)"><div class="pl" style="color:var(--amber)">01 — Protein First</div><div class="pt">On low-appetite days, hit 185g protein before anything else. Six training days means muscle protein synthesis is elevated constantly — feed it.</div></div>
-      <div class="pri" style="border-left-color:var(--sage)"><div class="pl" style="color:var(--sage)">02 — Never Below 80g Fat</div><div class="pt">Dietary fat drives testosterone, joint health, and vitamin absorption. Going too low damages hormonal response and recovery quality.</div></div>
-      <div class="pri" style="border-left-color:var(--rust)"><div class="pl" style="color:var(--rust)">03 — Recovery Is the Limiter</div><div class="pt">At six days a week, your results are capped by recovery, not effort. If lifts stall or you feel run-down, that's under-recovery — add a rest day or more food, not more volume.</div></div>
-      <div class="pri" style="border-left-color:var(--good)"><div class="pl" style="color:var(--good)">04 — Track Waist, Not Scale</div><div class="pt">You're gaining muscle and losing fat at once — the scale misleads. Measure your waist weekly at the navel, first thing in the morning. That's the real marker.</div></div>
+      <div class="pri" style="border-left-color:var(--amber)"><div class="pl" style="color:var(--amber)">01 — Protein First</div><div class="pt">On low-appetite days, hit 185g protein before anything else. It protects the muscle you're building while you lose fat.</div></div>
+      <div class="pri" style="border-left-color:var(--sage)"><div class="pl" style="color:var(--sage)">02 — Never Below 80g Fat</div><div class="pt">Dietary fat drives testosterone, joint health, and vitamin absorption. Going too low damages hormonal response and recovery.</div></div>
+      <div class="pri" style="border-left-color:var(--rust)"><div class="pl" style="color:var(--rust)">03 — Adjust by the Waist</div><div class="pt">If your waist stalls for 2+ weeks, drop calories ~150/day. If strength and energy crater, add ~150/day. Let the measurement guide the math.</div></div>
+      <div class="pri" style="border-left-color:var(--good)"><div class="pl" style="color:var(--good)">04 — Track Waist, Not Scale</div><div class="pt">You're gaining muscle and losing fat at once — the scale misleads. Measure your waist weekly at the navel, first thing in the morning.</div></div>
     </div>
     <div class="section" id="sec-notes">
       <div class="h2">Notes &amp; Reminders</div>
@@ -207,198 +178,124 @@
 </div>
 
 <script>
-// Core rotation: H = heavy/weighted (low rep), L = light/endurance. Alternates so abs aren't maxed daily.
-const coreHeavy = '<b>Heavy Core (weighted):</b> Weighted Plank 3×30 sec · Hanging Leg Raise 3×12 · Pulley/DB Woodchopper 3×12/side. Add load when you hit the top of the range.';
-const coreLight = '<b>Light Core (endurance):</b> Standard Plank 3×45 sec · Bicycle Crunch 3×20/side · Dead Bug 3×12/side. Bodyweight, controlled tempo.';
-const coreAbs = '<b>Ab Detail:</b> Ab Wheel 3×12 · Pulley Crunch 3×15 (kneeling) · Russian Twist 3×20 total. Squeeze hard at peak contraction.';
+const coreMix = '<b>Core:</b> Ab Wheel 3×12 · Hanging Leg Raise 3×15 · Plank 3×45 sec. Add weight or reps as it gets easy.';
 
-const P = [
-  {
-    c:'#e8a33d', soft:'rgba(232,163,61,0.10)',
-    tag:'Phase 1 · Weeks 1–4', name:'Foundation & Adaptation',
-    goal:'Establish the PPL pattern and build a hypertrophy base. Core rotates heavy/light daily so your midsection trains six days without being maxed. All movements ankle-safe. Sunday is full rest.',
-    days:{
-      MON:{l:'Push A', fc:'Chest focus', w:'5–7 min: arm circles, band pull-aparts, light shoulder rotations. Plus ankle mobility — 5 min.', c:'No separate cardio. Keep rest 60–75 sec to maintain a hypertrophy pace.',
-        s:[['Barbell Bench Press','4','8–10','2 sec controlled descent'],['Incline DB Press','4','10–12','45° angle'],['DB Flye','3','12–15','Stretch at bottom'],['Pulley Tricep Pushdown','4','12–15','Full extension'],['Overhead DB Extension','3','12','Keep elbows tucked'],['Push-Ups','2','AMRAP','Burnout to finish']],
-        core:coreHeavy},
-      TUE:{l:'Pull A', fc:'Back width focus', w:'5–7 min: band pull-aparts, scapular activation, light rows. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 60–75 sec.',
-        s:[['Barbell Bent-Over Row','4','8–10','Overhand grip, flat back'],['DB Single-Arm Row','4','10/side','Full stretch'],['DB Pullover','4','12','Lying across bench — big lat stretch'],['Pulley Curl','4','12–15','Constant tension'],['DB Hammer Curl','3','12',''],['Pulley Face Pull','3','15','Rear delt health']],
-        core:coreLight},
-      WED:{l:'Legs A', fc:'Squat focus', w:'5–7 min: bodyweight squats, leg swings, hip openers. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 90 sec on squats, 60 sec on accessories.',
-        s:[['Barbell Back Squat','4','8–10','Monitor left ankle — controlled depth'],['DB Goblet Squat','3','12','Pause at bottom'],['Romanian Deadlift','4','10','Hinge — ankle-friendly'],['Barbell Hip Thrust','4','12','Drive through heels'],['Seated Calf Raise (DB)','4','15–20','Pain-free range'],['Leg Raise','3','15','Lower abs']],
-        core:coreAbs},
-      THU:{l:'Push B', fc:'Shoulder focus', w:'5–7 min: shoulder dislocates with band, light presses. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 60–75 sec.',
-        s:[['Overhead Press (Barbell)','4','8–10','Brace core hard'],['DB Arnold Press','4','10–12','Full rotation'],['DB Lateral Raise','4','12–15','Slight forward lean'],['DB Front Raise','3','12',''],['Close-Grip Bench Press','3','10','Tricep emphasis'],['Pulley Tricep Pushdown','3','15','Burnout']],
-        core:coreLight},
-      FRI:{l:'Pull B', fc:'Back thickness focus', w:'5–7 min: band pull-aparts, scapular work. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 60–75 sec.',
-        s:[['Barbell Bent-Over Row (underhand)','4','8–10','Hits lower lats'],['DB Chest-Supported Row','4','10','Chest on incline bench'],['Straight-Arm Pulldown (pulley)','4','12–15','Kneeling — lat isolation, full range'],['Barbell Shrug','4','12–15','Hold at top'],['DB Incline Curl','4','12','Full stretch'],['Pulley Face Pull','3','15','External rotation']],
-        core:coreHeavy},
-      SAT:{l:'Legs B + Arms', fc:'Posterior chain + arm detail', w:'5–7 min: hip hinges, leg swings, band curls. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 90 sec on deadlift, 60 sec rest elsewhere.',
-        s:[['Conventional Deadlift','4','6–8','Heavy, brace hard'],['Bulgarian Split Squat (DB)','3','8/leg','Rear foot on bench — monitor ankle'],['DB Romanian Deadlift','3','12','Hamstring stretch'],['Barbell Curl','4','10','Strict form'],['Pulley Curl + Pushdown superset','3','12+12','No rest between'],['Seated Calf Raise','4','20','Slow eccentric']],
-        core:coreAbs},
-      SUN:{l:'Rest', fc:'Full recovery', w:'Complete rest day — no training.', c:'Rest. Optional light walk and full ankle mobility if you feel like moving.',
-        s:[], core:''},
-    }
+const DAYS = {
+  MON: {
+    l:'Push', fc:'Chest, shoulders, triceps',
+    w:'5–7 min: arm circles, band pull-aparts, light shoulder rotations. Plus ankle mobility — 5 min.',
+    note:'Rest 60–90 sec between sets. Heavier compound work first, isolation after.',
+    s:[
+      ['Barbell Bench Press','4','8–10','Primary chest — 2 sec descent'],
+      ['Overhead Press (Barbell)','4','8–10','Primary shoulder — brace core'],
+      ['Incline DB Press','3','10–12','Upper chest, 45° angle'],
+      ['DB Lateral Raise','4','12–15','Side delts — slight forward lean'],
+      ['Pulley Tricep Pushdown','4','12–15','Full extension'],
+      ['Overhead DB Extension','3','12','Long head of triceps'],
+    ], core:''
   },
-  {
-    c:'#a3b18a', soft:'rgba(163,177,138,0.10)',
-    tag:'Phase 2 · Weeks 5–8', name:'Intensity & Volume',
-    goal:'Add load and volume across the PPL split. Rest periods tighten slightly for more metabolic stress. Core progresses with added weight. Week 8 is a deload — drop loads 40%, keep movements. Sunday rest.',
-    days:{
-      MON:{l:'Push A', fc:'Chest focus', w:'5–7 min shoulder and elbow prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 60 sec.',
-        s:[['Barbell Bench Press','5','8–10','Add 5 lbs from Phase 1'],['Incline DB Press','4','10–12','+5 lbs'],['DB Flye','3','12–15','Slow stretch'],['Pulley Tricep Pushdown','4','10–12','Heavier'],['Overhead DB Extension','4','12',''],['Weighted Push-Ups','3','AMRAP','Plate on back']],
-        core:coreHeavy},
-      TUE:{l:'Pull A', fc:'Back width focus', w:'5–7 min band and scapular prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 60 sec.',
-        s:[['Barbell Bent-Over Row','5','8–10','Heavier than Phase 1'],['DB Single-Arm Row','4','10/side',''],['DB Pullover','4','12','Add load — lat stretch'],['Pulley Curl','4','10–12','Heavier'],['DB Hammer Curl','4','12',''],['Pulley Face Pull','4','15','']],
-        core:coreLight},
-      WED:{l:'Legs A', fc:'Squat focus', w:'5–7 min hip and knee prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 90 sec squats, 60 sec accessories.',
-        s:[['Barbell Back Squat','5','8–10','Add 5–10 lbs'],['DB Goblet Squat','4','12',''],['Romanian Deadlift','4','10','Add load'],['Barbell Hip Thrust','4','12','Heavier'],['Seated Calf Raise (DB)','4','20','3 sec eccentric'],['Hanging Leg Raise','4','15','']],
-        core:coreAbs},
-      THU:{l:'Push B', fc:'Shoulder focus', w:'5–7 min shoulder prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 60 sec.',
-        s:[['Overhead Press (Barbell)','5','8–10','Add 5 lbs'],['DB Arnold Press','4','10–12',''],['DB Lateral Raise (drop set)','4','12+10+8','No rest between drops'],['DB Front Raise','3','12',''],['Close-Grip Bench Press','4','10',''],['Pulley Tricep Pushdown','3','15','Burnout']],
-        core:coreLight},
-      FRI:{l:'Pull B', fc:'Back thickness focus', w:'5–7 min band and scapular prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 60 sec.',
-        s:[['Barbell Bent-Over Row (underhand)','5','8–10','Heavier'],['DB Chest-Supported Row','4','10',''],['Straight-Arm Pulldown (pulley)','4','12–15','Kneeling — lat isolation'],['Barbell Shrug','4','12–15','Heavier'],['DB Incline Curl','4','12',''],['Pulley Face Pull','4','15','']],
-        core:coreHeavy},
-      SAT:{l:'Legs B + Arms', fc:'Posterior chain + arm detail', w:'5–7 min hinge and curl prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 90 sec deadlift, 60 sec elsewhere.',
-        s:[['Conventional Deadlift','5','6–8','Near max effort'],['Bulgarian Split Squat (DB)','4','8/leg','Monitor ankle'],['DB Romanian Deadlift','4','12',''],['Barbell Curl','4','10',''],['Pulley Curl + Pushdown superset','4','12+12','No rest between'],['Seated Calf Raise','4','20','']],
-        core:coreAbs},
-      SUN:{l:'Rest', fc:'Full recovery', w:'Complete rest day — no training.', c:'Rest. Optional light walk and ankle mobility.',
-        s:[], core:''},
-    }
+  WED: {
+    l:'Pull', fc:'Back, biceps',
+    w:'5–7 min: band pull-aparts, scapular activation, light rows. Plus ankle mobility — 5 min.',
+    note:'Rest 60–90 sec. Row heavy, then focus on lat stretch and bicep isolation.',
+    s:[
+      ['Barbell Bent-Over Row','4','8–10','Primary back thickness — flat back'],
+      ['DB Single-Arm Row','4','10/side','Full stretch each rep'],
+      ['DB Pullover','3','12','Lat width — lying across bench'],
+      ['Straight-Arm Pulldown (pulley)','3','12–15','Kneeling — lat isolation'],
+      ['Pulley Curl','4','12–15','Constant tension — squeeze top'],
+      ['DB Hammer Curl','3','12','Brachialis + forearm'],
+      ['Pulley Face Pull','3','15','Rear delt + shoulder health'],
+    ], core:''
   },
-  {
-    c:'#d4734f', soft:'rgba(212,115,79,0.10)',
-    tag:'Phase 3 · Weeks 9–12', name:'Peak & Recomposition',
-    goal:'Peak volume and intensity — results become undeniable. Supersets and drop sets intensify each session. Core is at peak load. Week 12 tests your working maxes. Sunday rest remains non-negotiable.',
-    days:{
-      MON:{l:'Push A', fc:'Chest focus', w:'7 min thorough shoulder and elbow prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 45–60 sec for peak metabolic stress.',
-        s:[['Barbell Bench Press','5','6–8','Push working weight up'],['Incline DB Press','4','8–10','Heavy'],['DB Flye','4','12–15',''],['Pulley Pushdown + Overhead Ext superset','4','12+12','No rest between'],['Dips (weighted if able)','3','AMRAP','Chest lean'],['Weighted Push-Ups','2','AMRAP','Final burnout']],
-        core:coreHeavy},
-      TUE:{l:'Pull A', fc:'Back width focus', w:'7 min band and scapular prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 45–60 sec.',
-        s:[['Barbell Bent-Over Row','5','6–8','Heavy'],['DB Single-Arm Row','4','8/side',''],['DB Pullover','4','12','Add load — lat stretch'],['Pulley Curl + Hammer Curl superset','4','12+12','No rest between'],['Pulley Face Pull','4','15',''],['Dead Hang','3','Max','Grip + decompression']],
-        core:coreLight},
-      WED:{l:'Legs A', fc:'Squat focus', w:'7 min thorough hip and knee prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 90 sec squats, 45–60 sec accessories.',
-        s:[['Barbell Back Squat','5','6–8','Push working weight up'],['Pause Squat (BB)','3','5','3 sec pause'],['Romanian Deadlift','4','8','Heavy'],['Barbell Hip Thrust','4','10','Max load'],['Seated Calf Raise (DB)','5','15–20',''],['Hanging Leg Raise','4','15','']],
-        core:coreAbs},
-      THU:{l:'Push B', fc:'Shoulder focus', w:'7 min shoulder prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 45–60 sec.',
-        s:[['Overhead Press (Barbell)','5','6–8','Heavy'],['DB Arnold Press','4','10','']  ,['DB Lateral Raise (drop set)','4','12+10+8','No rest between drops'],['DB Front Raise','3','12',''],['Close-Grip Bench Press','4','8–10','Heavy'],['Pulley Pushdown','3','20','Burnout']],
-        core:coreLight},
-      FRI:{l:'Pull B', fc:'Back thickness focus', w:'7 min band and scapular prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 45–60 sec.',
-        s:[['Barbell Bent-Over Row (underhand)','5','6–8','Heavy'],['DB Chest-Supported Row','4','10',''],['Straight-Arm Pulldown (pulley)','4','12–15','Kneeling — lat isolation'],['Barbell Shrug','4','12','Heavy'],['DB Incline Curl + Barbell Curl superset','4','12+10','No rest between'],['Pulley Face Pull','4','15','']],
-        core:coreHeavy},
-      SAT:{l:'Legs B + Arms', fc:'Posterior chain + arm detail', w:'7 min hinge and curl prep. Plus ankle mobility — 5 min.', c:'No separate cardio. Rest 90 sec deadlift, 45–60 sec elsewhere.',
-        s:[['Conventional Deadlift','5','5','Work to near-max'],['Bulgarian Split Squat (DB)','4','8/leg','Monitor ankle'],['DB Romanian Deadlift','4','12',''],['Barbell Curl','4','8–10','Heavy'],['Pulley Curl + Pushdown superset','4','15+15','No rest — peak pump'],['Seated Calf Raise','5','20','']],
-        core:coreAbs},
-      SUN:{l:'Rest', fc:'Full recovery', w:'Complete rest day — no training.', c:'Rest. Optional light walk and ankle mobility.',
-        s:[], core:''},
-    }
-  }
-];
+  THU: {
+    l:'Legs', fc:'Quads, hamstrings, glutes, calves',
+    w:'5–7 min: bodyweight squats, leg swings, hip openers. Plus ankle mobility — 5 min.',
+    note:'Rest 90 sec on squats and deadlifts, 60 sec on the rest. Monitor the left ankle on loaded movements.',
+    s:[
+      ['Barbell Back Squat','4','8–10','Primary quads — controlled depth'],
+      ['Romanian Deadlift','4','10','Hamstrings — hinge, ankle-friendly'],
+      ['DB Goblet Squat','3','12','Pause at bottom'],
+      ['Barbell Hip Thrust','4','12','Glutes — drive through heels'],
+      ['DB Romanian Deadlift','3','12','Extra hamstring stretch'],
+      ['Seated Calf Raise (DB on knee)','4','15–20','Pain-free range only'],
+    ], core:coreMix
+  },
+  SAT: {
+    l:'Supplemental', fc:'Even mix — chest, back, shoulders, arms, core',
+    w:'5–7 min full-body light movement. Plus ankle mobility — 5 min.',
+    note:'A lighter second pass at everything. Rest 45–60 sec, chase the pump. Adjust weight so all sets stay smooth.',
+    s:[
+      ['Incline DB Press','3','12','Chest — different angle from Monday'],
+      ['DB Chest-Supported Row','3','12','Back — chest on incline bench'],
+      ['DB Arnold Press','3','12','Shoulders — full rotation'],
+      ['DB Lateral Raise','3','15','Side delt volume'],
+      ['Barbell Curl','3','10–12','Biceps'],
+      ['Pulley Pushdown','3','15','Triceps'],
+      ['DB Pullover','2','15','Lat + chest stretch'],
+    ], core:coreMix
+  },
+};
 
-const RULES = [
-  'Add 5 lbs to upper body lifts every 1–2 weeks when you hit the top of the rep range cleanly for all sets.',
-  'Add 10 lbs to lower body lifts every 1–2 weeks at the top of the rep range.',
-  'Core load progresses too — add weight to planks and leg raises when the top of the range feels easy.',
-  'Rest periods tighten by phase: 60–75 sec → 60 sec → 45–60 sec. Shorter rest drives more metabolic stress for hypertrophy.',
-  'Push/Pull/Legs rotation means no muscle group is hit two days running — this is what makes six days sustainable.',
-  'Core rotates heavy / light / abs across the week so your midsection trains daily without being maxed.',
-  'Week 8 is a planned deload — reduce all loads by 40%, keep every movement.',
-  'Log Week 1 working weights as baselines. Retest your top working sets in Week 12.',
-];
-
-const WEEK = [
-  ['Mon','Push A — chest focus + heavy core','#e8a33d'],
-  ['Tue','Pull A — back width + light core','#e8a33d'],
-  ['Wed','Legs A — squat focus + abs','#e8a33d'],
-  ['Thu','Push B — shoulder focus + light core','#e8a33d'],
-  ['Fri','Pull B — back thickness + heavy core','#e8a33d'],
-  ['Sat','Legs B + arms + abs','#d4734f'],
-  ['Sun','Full Rest','#5c554b'],
+const HOW = [
+  'This is one fixed week. Repeat it indefinitely — you decide when to add weight, reps, or sets.',
+  'Simple rule if you want one: when you hit the top of the rep range on all sets with clean form, add a small amount of weight next time (5 lbs upper body, 5–10 lbs lower body).',
+  "If you can't hit the bottom of the rep range, the weight is too heavy — drop it slightly and build back up.",
+  'To add volume instead of weight, add one set to a lift, or add an exercise to a day. More total sets per muscle per week drives more growth.',
+  'Rest periods are a lever too — shorter rest (45–60 sec) adds metabolic stress and conditioning; longer rest (90+ sec) lets you lift heavier.',
+  'Deload whenever you feel beat up: run a week at ~60% of your usual weights, then resume. No fixed schedule needed.',
+  'Rotate exercises freely — swap any movement for another that trains the same muscle if you get bored or hit a plateau.',
 ];
 
 const NOTES = [
-  {w:1, t:'Recovery Is the Real Limiter', b:'Six training days a week is demanding, especially in a calorie deficit. Your gains are now capped by how well you recover, not how hard you push. If your lifts stall, sleep suffers, or you feel persistently run-down, that is under-recovery — the answer is more food and sleep, or an extra rest day, never more volume.'},
-  {w:1, t:'Ankle Still Protected', b:'No movement in this plan requires ankle impact. Keep doing the daily mobility work. Only reintroduce running once you have a full week of completely pain-free walking — and even then, it is optional, not part of this plan.'},
-  {w:0, t:'Why PPL Twice a Week Works', b:'Hitting each muscle group twice weekly with 48+ hours between sessions is one of the most effective frequencies for hypertrophy. The rotation is deliberate — Push, Pull, Legs never repeat on back-to-back days, so each muscle gets full recovery while you still train six days.'},
-  {w:0, t:'Reading the Scale', b:"You're gaining muscle and losing fat simultaneously — the scale will climb or stall even as you get leaner. Your bench going 115 to 135 and the new definition you're seeing are the real signals. Trust the waist measurement and the mirror over the scale."},
-  {w:0, t:'Sleep', b:'7–9 hours is non-negotiable at this volume. Muscle is built during sleep, not in the gym. On six training days, protecting sleep is as important as any single workout.'},
-  {w:0, t:'Week 12 Testing', b:'Retest your top working sets on bench, squat, row, and overhead press. Record everything — these become baselines for the next cycle.'},
+  {w:1, t:'Ankle Protected', b:'No movement here requires ankle impact. Keep doing the daily mobility work. Only reintroduce running once you have a full week of completely pain-free walking — and even then it is optional, not part of this plan.'},
+  {w:0, t:'Four Days, Once Each', b:'Push, Pull, and Legs are trained once for their main work; the Supplemental day adds a lighter second pass across everything. This keeps weekly volume high enough for growth while leaving three full recovery days.'},
+  {w:0, t:'You Control Progression', b:'This week never changes on its own. Increasing weight, adding sets, or changing rep ranges is entirely your call. See the How to Load tab for a simple framework if you want one.'},
+  {w:0, t:'Reading the Scale', b:"You're gaining muscle and losing fat simultaneously — the scale will climb or stall even as you get leaner. Your strength gains and new definition are the real signals. Trust the waist measurement and the mirror."},
+  {w:0, t:'Sleep', b:'7–9 hours is non-negotiable. Muscle is built during sleep, not in the gym. Protecting sleep matters as much as any single session.'},
 ];
 
-let AP = 0, AD = 'MON';
-const wkEl = document.getElementById('weeks');
-for (let i = 1; i <= 12; i++) {
-  const d = document.createElement('div');
-  d.className = 'wk'; d.textContent = i;
-  d.onclick = () => phase(i <= 4 ? 0 : i <= 8 ? 1 : 2);
-  wkEl.appendChild(d);
-}
+let AD = 'MON';
 function sec(id, btn) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('on'));
   document.getElementById('sec-' + id).classList.add('on');
   document.querySelectorAll('.nav button').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
 }
-function phase(i) {
-  AP = i; AD = 'MON';
-  document.querySelectorAll('.day-sq').forEach((b, x) => b.classList.toggle('on', x === 0));
-  draw();
-}
 function day(d, btn) {
   AD = d;
-  document.querySelectorAll('.day-sq').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.day-sq').forEach(b => {
+    b.classList.remove('on');
+    b.style.background = 'var(--panel)'; b.style.borderColor = 'var(--line)';
+  });
   btn.classList.add('on');
-  drawDay();
-}
-function draw() {
-  const p = P[AP];
-  [0,1,2].forEach(i => {
-    const el = document.getElementById('ps-' + i);
-    const n = el.querySelector('.n'), w = el.querySelector('.w');
-    if (i === AP) { el.style.borderColor = P[i].c; el.style.background = P[i].soft; n.style.color = P[i].c; w.style.color = P[i].c; }
-    else { el.style.borderColor = 'var(--line)'; el.style.background = 'var(--panel)'; n.style.color = 'var(--dim)'; w.style.color = 'var(--dim)'; }
-  });
-  document.querySelectorAll('.wk').forEach((el, idx) => {
-    const wkPhase = idx < 4 ? 0 : idx < 8 ? 1 : 2;
-    if (wkPhase === AP) { el.classList.add('lit'); el.style.background = P[AP].c; el.style.borderColor = P[AP].c; }
-    else { el.classList.remove('lit'); el.style.background = 'transparent'; el.style.borderColor = 'var(--line)'; el.style.color = 'var(--dim)'; }
-  });
-  const bn = document.getElementById('pbanner');
-  bn.style.borderLeftColor = p.c;
-  document.getElementById('ptag').style.color = p.c;
-  document.getElementById('ptag').textContent = p.tag.toUpperCase();
-  document.getElementById('pname').textContent = p.name;
-  document.getElementById('pgoal').textContent = p.goal;
+  btn.style.background = 'var(--amber)'; btn.style.borderColor = 'var(--amber)';
   drawDay();
 }
 function drawDay() {
-  const p = P[AP], d = p.days[AD];
+  const d = DAYS[AD];
   const el = document.getElementById('daybody');
-  if (!d) { el.innerHTML = ''; return; }
-  let h = `<div class="day-head"><span class="d" style="color:${p.c}">${AD}</span><span class="t">${d.l}</span></div>`;
+  const c = 'var(--amber)';
+  let h = `<div class="day-head"><span class="d" style="color:${c}">${AD}</span><span class="t">${d.l}</span></div>`;
   h += `<div class="day-focus">${d.fc}</div>`;
-  h += `<div class="box" style="border-left:3px solid ${p.c}"><div class="box-tag" style="color:${p.c}">Warm-Up</div><div class="box-txt">${d.w}</div></div>`;
-  h += `<div class="box"><div class="box-tag" style="color:var(--good)">Cardio</div><div class="box-txt">${d.c}</div></div>`;
-  if (d.s.length) {
-    h += `<div class="tblw"><table><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Notes</th></tr></thead><tbody>`;
-    d.s.forEach(r => { h += `<tr><td class="ex">${r[0]}</td><td class="st" style="color:${p.c}">${r[1]}</td><td class="rp">${r[2]}</td><td class="nt">${r[3] || '—'}</td></tr>`; });
-    h += `</tbody></table></div>`;
-    if (d.core) {
-      h += `<div class="core-block"><div class="core-tag">Core</div><div class="core-txt">${d.core}</div></div>`;
-    }
-  } else {
-    h += `<div class="rest-note">Sunday — Full Rest<br>Recover, refuel, sleep</div>`;
-  }
+  h += `<div class="box" style="border-left:3px solid ${c}"><div class="box-tag" style="color:${c}">Warm-Up</div><div class="box-txt">${d.w}</div></div>`;
+  h += `<div class="box"><div class="box-tag" style="color:var(--good)">How to Run It</div><div class="box-txt">${d.note}</div></div>`;
+  h += `<div class="tblw"><table><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Notes</th></tr></thead><tbody>`;
+  d.s.forEach(r => { h += `<tr><td class="ex">${r[0]}</td><td class="st" style="color:${c}">${r[1]}</td><td class="rp">${r[2]}</td><td class="nt">${r[3] || '—'}</td></tr>`; });
+  h += `</tbody></table></div>`;
+  if (d.core) { h += `<div class="core-block"><div class="core-tag">Core</div><div class="core-txt">${d.core}</div></div>`; }
   el.innerHTML = h;
 }
-document.getElementById('rules').innerHTML = RULES.map((r,i) =>
+// set Monday active button color on load
+document.getElementById('ds-MON').style.background = 'var(--amber)';
+document.getElementById('ds-MON').style.borderColor = 'var(--amber)';
+
+document.getElementById('howbody').innerHTML = HOW.map((r,i) =>
   `<div class="rule"><div class="no">${String(i+1).padStart(2,'0')}</div><div class="tx">${r}</div></div>`).join('');
-document.getElementById('weekstruct').innerHTML = WEEK.map(([d,t,c]) =>
-  `<div class="wrow"><span class="wd" style="color:${c}">${d}</span><span class="wt">${t}</span></div>`).join('');
 document.getElementById('notesbody').innerHTML = NOTES.map(n =>
   `<div class="note" style="border-left-color:${n.w ? 'var(--rust)' : 'var(--sage)'}"><div class="nl" style="color:${n.w ? 'var(--rust)' : 'var(--sage)'}">${n.w ? '⚠ ' : ''}${n.t}</div><div class="nb">${n.b}</div></div>`).join('');
-draw();
+
+drawDay();
 </script>
 </body>
 </html>
